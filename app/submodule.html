@@ -119,14 +119,14 @@
               </div>
               <div class="container">
                 <div class="leftSpacing">
-                  <form role="form" validate>
+                  <form method="POST" id="usrForm" role="form" validate >
                     <div class="d-flex">
                       <div class="bg mdl-shadow--2dp">
                         <div>
                           <label for="fname">First name</label>
                         </div>
                         <div>
-                          <input type="text" placeholder="Elon" required/>
+                          <input id="fname" name="firstName" type="text" placeholder="Elon" required autocomplete="Name"/>
                         </div>
                       </div>
                       <div class="bg mdl-shadow--2dp leftSpacing">
@@ -134,7 +134,7 @@
                           <label for="lname">Last name</label>
                         </div>
                         <div>
-                          <input type="text" placeholder="Musk" required/>
+                          <input id="lname" name="lastName" type="text" placeholder="Musk" required autocomplete="Name"/>
                         </div>
                       </div>
                     </div>
@@ -143,7 +143,7 @@
                         <label for="email">Email</label>
                       </div>
                       <div>
-                        <input type="email" placeholder="elon@spacex.com" required/>
+                        <input type="email" name="email" id="email" placeholder="elon@spacex.com" required autocomplete="email"/>
                       </div>
                     </div>
                     <div class="d-flex">
@@ -164,7 +164,7 @@
                           <label for="pcode">Postal Code</label>
                         </div>
                         <div>
-                          <input type="text" placeholder="10001" required/>
+                          <input type="text" name="Postal" id="pcode" placeholder="10001" required autocomplete="postal-code"/>
                         </div>
                       </div>
                     </div>
@@ -173,7 +173,7 @@
                         <label for="pnumber">Phone Number</label>
                       </div>
                       <div>
-                        <input type="email" placeholder="(212) 692-93-92" required/>
+                        <input type="text" name="phone"  id="pnumber" placeholder="(212) 692-93-92" required autocomplete="tel"/>
                       </div>
                     </div>
                   <!-- </form> -->
@@ -194,17 +194,19 @@
                       <div>
                         <input
                           type="text"
+                          name="cNumber"
+                          id ="ccn"
                           placeholder="0000 - 0000 - 0000 - 0000"
-                          required/><i class="fab fa-cc-visa"></i>
+                          required autocomplete="cc-number"/><i class="fab fa-cc-visa"></i>
                       </div>
                     </div>
                     <div class="d-flex">
                       <div class="bg1 mdl-shadow--2dp">
                         <div>
-                          <label for="Scode">Security Code</label>
+                          <label for="sCode">Security Code</label>
                         </div>
                         <div>
-                          <input type="text" placeholder="***" required/><i
+                          <input type="text" name="cvc" id="sCode" placeholder="***" required autocomplete="cc-csc"/><i
                             class="far fa-question-circle inline2"
                           ></i>
                         </div>
@@ -214,31 +216,12 @@
                           <label for="exDate">Expiration date</label>
                         </div>
                         <div>
-                          <input type="text" placeholder="MM / YY" required/>
+                          <input type="text" name="ccExp" id="exDate" placeholder="MM-YY" required autocomplete="cc-exp"/>
                         </div>
                       </div>
                     </div>
-
-                    <div>
-                      <!-- <div class="leftSpacing"> -->
-                      <button type="submit" class="bgButton mdl-shadow--2dp"><i class="fas fa-shopping-cart"> </i>
+                      <button id="checkOut" type="submit" class="bgButton mdl-shadow--2dp"><i class="fas fa-shopping-cart"> </i>
                         Complete Purchase</button>
-                      <!-- </div> -->
-                    </div>
-
-                    <!-- <div class="bgButton mdl-shadow--2dp"> -->
-                    <!-- <a href="#"> -->
-                    <!-- <a type="submit" href="#" class="bgButton mdl-shadow--2dp">
-                      <i class="fas fa-shopping-cart"> </i>
-                      Complete Purchase
-                    </a> -->
-                    <!-- <button></button> -->
-                    <!-- <label for="pnumber">Phone Number</label> -->
-                    <!-- </a> -->
-                    <!-- <div>
-                        <input type="email" placeholder="(212) 692-93-92" />
-                      </div> -->
-                    <!-- </div> -->
                   </form>
                 </div>
               </div>
@@ -390,10 +373,58 @@
     <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
     <!-- build:js(app/) ../../scripts/main.min.js -->
     <script src="scripts/main.js"></script>
+    <script type="text/javascript">
+      var form;
+      function initForm() {
+        form = document.getElementById("usrForm")
+        /* // [START preventsubmission] */
+        form.addEventListener("submit", function(evt) {
+          if (form.checkValidity() === false) {
+            evt.preventDefault();
+            alert("Payment Not Successfully, Please Check Your Details!");
+            return false;
+          } else {
+            evt.preventDefault();
+            alert("Payment Successfully");
+            form.reset();
+            return false;
+          }
+        });
+        /* // [END preventsubmission] */
+      }
+
+      function initInputs() {
+        /* // [START initinputs] */
+        var inputs = document.getElementsByTagName("input");
+        var inputs_len = inputs.length;
+        var addDirtyClass = function(evt) {
+          sampleCompleted("Forms-order-dirty");
+          evt.srcElement.classList.toggle("dirty", true);
+        };
+        for (var i = 0; i < inputs_len; i++) {
+          var input = inputs[i];
+          input.addEventListener("blur", addDirtyClass);
+          input.addEventListener("invalid", addDirtyClass);
+          input.addEventListener("valid", addDirtyClass);
+        }
+        /* // [END initinputs] */
+      }
+
+      function initNoSubmit() {
+        form.addEventListener("submit", function(evt) {
+          evt.preventDefault();
+          alert("Submission of this form is prevented.");
+        });
+      }
+
+      initForm();
+      initInputs();
+    </script>
     <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
+   
       let cloneBaconImage = document.getElementById('cloneBaconImage');
       cloneBaconImage.addEventListener('click', function() {
         let bacon = document.getElementById('bacon');

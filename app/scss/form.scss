@@ -14,6 +14,15 @@ $p-5: 5px;
 body {
   background: $bg-forContainer !important;
 }
+
+input.dirty:not(:focus):invalid {
+  background-color: #ffd9d9;
+}
+
+input.dirty:not(:focus):valid {
+  background-color: #d9ffd9;
+}
+
 .container {
   width: $container-width - 20;
   display: flex;
