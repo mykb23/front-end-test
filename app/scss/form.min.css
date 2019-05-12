@@ -1,21 +1,281 @@
+body {
+  background: #f5f5f5 !important;
+}
+
 .container {
   width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #f2f2f2;
   margin: 0 auto;
+  height: auto;
 }
 
 .col-8 {
-  width: 60%;
+  width: 70%;
 }
 
 .col-4 {
-  width: 40%;
+  width: 30%;
 }
 
 .rounded-circle {
   border-radius: 100%;
+  color: white;
+  background: #0f0f0f;
+}
+
+h4 {
   color: #0f0f0f;
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+h5 {
+  font-weight: bold;
+  padding-top: 5px;
+  margin-left: 10px;
+  color: #0f0f0f;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bg {
+  background: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 250px;
+}
+
+.bg label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #5c5365;
+}
+
+.bg input {
+  border: none;
+  font-size: 18px;
+  color: #9f9d9c;
+  width: 250px;
+}
+
+.bg select {
+  width: 250px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+}
+
+.bg1 {
+  background: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 250px;
+}
+
+.bg1 label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #5c5365;
+}
+
+.bg1 input {
+  border: none;
+  color: #9f9d9c;
+  width: 220px;
+}
+
+.bg1 i .far {
+  font-size: 24px;
+}
+
+.bgMoreWidth {
+  margin: 20px 0;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 575px;
+}
+
+.bgMoreWidth label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #5c5365;
+}
+
+.bgMoreWidth input {
+  border: none;
+  font-size: 18px;
+  color: #9f9d9c;
+  width: 575px;
+}
+
+.bgMoreWidth-visa {
+  margin: 20px 0;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 575x;
+}
+
+.bgMoreWidth-visa label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #5c5365;
+}
+
+.bgMoreWidth-visa input {
+  border: none;
+  font-size: 18px;
+  color: #9f9d9c;
+  width: 550px;
+}
+
+.bgButton {
+  background: #6bd400;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 615px;
+  margin-left: 0;
+  margin-top: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.bgButton a {
+  text-decoration: none;
+}
+
+.bgButton i .fas {
+  font-size: 18px;
+  padding-right: 10px;
+}
+
+.inline {
+  padding-top: 30px;
+  margin-left: 10px;
+}
+
+.inline2 {
+  display: inline;
+}
+
+.leftSpacing {
+  margin-left: 35px;
+}
+
+.containTop {
+  background: none;
+  padding-top: 72px;
+}
+
+.containTop .bgOrder {
+  background: white;
+  padding: 5px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.containTop .pad {
+  padding: 10px;
+}
+
+.containTop .border {
+  border-radius: 10px;
+  border: #5c5365 dashed 1px;
+}
+
+.containTop .dflex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 13px;
+}
+
+.containTop .right {
+  padding-left: 105px;
+  float: right;
+}
+
+.containTop .right1 {
+  padding-left: 130px;
+  float: right;
+}
+
+.containTop p {
+  margin: 0;
+}
+
+.containTop .top {
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.containTop .dash {
+  width: 270px;
+  margin-top: 25px;
+  margin: 0 auto;
+  border-top: #5c5365 dashed 1px;
+  border-bottom: #5c5365 dashed 1px;
+  padding: 0;
+}
+
+.containTop .dash .dflex {
+  margin-left: 0;
+  padding-top: 10px;
+}
+
+.containTop .dash .right {
+  padding-left: 105px;
+  float: right;
+}
+
+.containTop .dash .right1 {
+  padding-left: 155px;
+  float: right;
+}
+
+.containTop .dash .top {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.containTop p {
+  margin: 0;
+}
+
+.containTop .subT {
+  font-weight: bold;
+}
+
+.containTop .total {
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.containTop .total .subT1 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.containTop .total .dflex {
+  margin-left: 0;
+}
+
+.containTop .total .right {
+  padding-left: 180px;
+  float: right;
+}
+
+p {
+  margin: 0;
 }

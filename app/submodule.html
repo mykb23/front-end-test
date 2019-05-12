@@ -62,6 +62,12 @@
     />
 
     <!-- Your styles -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="scss/form.min.css" />
   </head>
@@ -79,7 +85,7 @@
           class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark"
         >
           <a href="#overview" class="mdl-layout__tab is-active">Bacon</a>
-          <a href="#checkoutForm" class="mdl-layout__tab ">Checkout</a>
+          <a href="#checkoutForm" class="mdl-layout__tab">Checkout</a>
         </div>
       </header>
       <main class="mdl-layout__content">
@@ -102,24 +108,208 @@
             />
           </section>
         </div>
-        <div class="container" id="checkoutForm">
-          <section
-            class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp col-8"
-          >
-            <h1>Test</h1>
-            <!-- <button action="button" class="button">
+        <div class="mdl-layout__tab-panel" id="checkoutForm">
+          <div class="container">
+            <section
+              class="section--center mdl-grid mdl-grid--no-spacing mdl-no-shadow--2dp col-8"
+            >
+              <div class="container">
+                <h4 class="rounded-circle">1</h4>
+                <h5 class="bg-dark">PERSONAL INFORMATION</h5>
+              </div>
+              <div class="container">
+                <div class="leftSpacing">
+                  <form role="form" validate>
+                    <div class="d-flex">
+                      <div class="bg mdl-shadow--2dp">
+                        <div>
+                          <label for="fname">First name</label>
+                        </div>
+                        <div>
+                          <input type="text" placeholder="Elon" required/>
+                        </div>
+                      </div>
+                      <div class="bg mdl-shadow--2dp leftSpacing">
+                        <div>
+                          <label for="lname">Last name</label>
+                        </div>
+                        <div>
+                          <input type="text" placeholder="Musk" required/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bgMoreWidth mdl-shadow--2dp">
+                      <div>
+                        <label for="email">Email</label>
+                      </div>
+                      <div>
+                        <input type="email" placeholder="elon@spacex.com" required/>
+                      </div>
+                    </div>
+                    <div class="d-flex">
+                      <div class="bg mdl-shadow--2dp">
+                        <div>
+                          <label for="country">Country</label>
+                        </div>
+                        <div>
+                          <select name="country" id="country" required>
+                            <option value="USA">United States</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="CA">Canada</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="bg mdl-shadow--2dp leftSpacing">
+                        <div>
+                          <label for="pcode">Postal Code</label>
+                        </div>
+                        <div>
+                          <input type="text" placeholder="10001" required/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bgMoreWidth mdl-shadow--2dp">
+                      <div>
+                        <label for="pnumber">Phone Number</label>
+                      </div>
+                      <div>
+                        <input type="email" placeholder="(212) 692-93-92" required/>
+                      </div>
+                    </div>
+                  <!-- </form> -->
+                </div>
+              </div>
+              <div class="container">
+                <h4 class="rounded-circle">2</h4>
+                <h5 class="bg-dark">PAYMENT DETAILS</h5>
+                <i class="fas fa-lock inline"></i>
+              </div>
+              <div class="container">
+                <div class="leftSpacing">
+                  <!-- <form role="form" validate> -->
+                    <div class="bgMoreWidth-visa mdl-shadow--2dp">
+                      <div>
+                        <label for="ccn">Credit Card Number</label>
+                      </div>
+                      <div>
+                        <input
+                          type="text"
+                          placeholder="0000 - 0000 - 0000 - 0000"
+                          required/><i class="fab fa-cc-visa"></i>
+                      </div>
+                    </div>
+                    <div class="d-flex">
+                      <div class="bg1 mdl-shadow--2dp">
+                        <div>
+                          <label for="Scode">Security Code</label>
+                        </div>
+                        <div>
+                          <input type="text" placeholder="***" required/><i
+                            class="far fa-question-circle inline2"
+                          ></i>
+                        </div>
+                      </div>
+                      <div class="bg mdl-shadow--2dp leftSpacing">
+                        <div>
+                          <label for="exDate">Expiration date</label>
+                        </div>
+                        <div>
+                          <input type="text" placeholder="MM / YY" required/>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <!-- <div class="leftSpacing"> -->
+                      <button type="submit" class="bgButton mdl-shadow--2dp"><i class="fas fa-shopping-cart"> </i>
+                        Complete Purchase</button>
+                      <!-- </div> -->
+                    </div>
+
+                    <!-- <div class="bgButton mdl-shadow--2dp"> -->
+                    <!-- <a href="#"> -->
+                    <!-- <a type="submit" href="#" class="bgButton mdl-shadow--2dp">
+                      <i class="fas fa-shopping-cart"> </i>
+                      Complete Purchase
+                    </a> -->
+                    <!-- <button></button> -->
+                    <!-- <label for="pnumber">Phone Number</label> -->
+                    <!-- </a> -->
+                    <!-- <div>
+                        <input type="email" placeholder="(212) 692-93-92" />
+                      </div> -->
+                    <!-- </div> -->
+                  </form>
+                </div>
+              </div>
+            </section>
+            <section
+              class="section--center mdl-grid mdl-grid--no-spacing mdl-no-shadow--2dp col-4"
+            >
+              <div class="containTop ">
+                <div class="bgOrder mdl-shadow--2dp">
+                  <!-- <div class="pad"> -->
+                  <div class="border">
+                    <h5>YOUR ORDER</h5>
+                    <div class="dflex">
+                      <div>
+                        <p class="subT">Apple Watch Sport</p>
+                      </div>
+                      <div class="right">
+                        <p class="subT">$ 580</p>
+                      </div>
+                    </div>
+
+                    <div class="dflex top">
+                      <div>
+                        <p class="subT">Modern Buckle</p>
+                      </div>
+                      <div class="right1">
+                        <p class="subT">$ 380</p>
+                      </div>
+                    </div>
+
+                    <div class="dash">
+                      <div class="dflex">
+                        <div>
+                          <p class="subT">Total purchases</p>
+                        </div>
+                        <div class="right">
+                          <p class="subT">$ 960.00</p>
+                        </div>
+                      </div>
+                      <div class="dflex top">
+                        <div>
+                          <p class="subT">Estimated tax</p>
+                        </div>
+                        <div class="right1">
+                          <p class="subT">$ 0</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="total dflex">
+                      <div>
+                        <p class="subT">Total</p>
+                      </div>
+                      <div class="right">
+                        <p class="subT1">$ 960</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- </div> -->
+                </div>
+              </div>
+              <!-- <button action="button" class="button"></button>
               Complete purchase
             </button> -->
-          </section>
-          <section
-            class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp col-4"
-          >
-            <!-- <img
+              <!-- <img
               src="http://media.washtimes.com.s3.amazonaws.com/media/image/2015/02/23/bacon.jpg"
               alt="Bacon"
               style="width: 100%; height: 100%;"
             /> -->
-          </section>
+            </section>
+          </div>
         </div>
         <footer class="mdl-mega-footer">
           <div class="mdl-mega-footer--middle-section">
